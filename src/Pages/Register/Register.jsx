@@ -10,8 +10,8 @@ import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 const Register = () => {
      const navigate = useNavigate();
      const { createUser, setUserName, setProfilePicture } =
-       useContext(AuthContext);
-    const googleProvider = new GoogleAuthProvider();
+    //    useContext(AuthContext);
+    // const googleProvider = new GoogleAuthProvider();
     
 
 
