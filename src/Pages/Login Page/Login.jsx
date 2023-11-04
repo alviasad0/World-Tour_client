@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import auth from './../../firebase/firebase.config';
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
     const googleProvider = new GoogleAuthProvider();

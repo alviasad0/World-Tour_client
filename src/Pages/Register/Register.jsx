@@ -5,13 +5,14 @@ import auth from './../../firebase/firebase.config';
 import Swal from "sweetalert2";
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Register = () => {
      const navigate = useNavigate();
      const { createUser, setUserName, setProfilePicture } =
-    //    useContext(AuthContext);
-    // const googleProvider = new GoogleAuthProvider();
+       useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider();
     
 
 
