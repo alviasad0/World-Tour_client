@@ -6,7 +6,7 @@ const AllServices = () => {
     const [packages , setAllPackages] = useState([])
     const allPackages= packages.slice(0, 4)
     useEffect(()=>{
-        fetch("http://localhost:5000/allServices")
+        fetch("services.json")
         .then(response => response.json())
         .then(data=>setAllPackages(data))
     },[])
