@@ -9,6 +9,9 @@ import Login from './Pages/Login Page/Login';
 import Register from './Pages/Register/Register';
 import AuthProvider from './Providers/AuthProvider';
 import AllPackages from './Pages/All packages/AllPackages';
+import Details from './Pages/Details/Details';
+import PrivateRouter from './PrivateRoute/PrivateRouter';
+import AddProduct from './Pages/AddProduct/AddProduct';
 
 
 const router = createBrowserRouter([
@@ -33,6 +36,21 @@ const router = createBrowserRouter([
         path: "/allPackages",
         element: <AllPackages></AllPackages>,
         loader: ()=> fetch('http://localhost:5000/allServices')
+      },
+      {
+        path : "/packageDetails/:id",
+        element: <PrivateRouter><Details></Details></PrivateRouter>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/allServices/${params.id}`),
+
+      },
+      {
+        path: "/addService",
+        element: (
+          <PrivateRouter>
+            <AddProduct></AddProduct>
+          </PrivateRouter>
+        ),
       },
     ]
   }

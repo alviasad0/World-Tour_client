@@ -15,7 +15,7 @@ const AllServices = () => {
         <div>
         <h1>this is the all services section </h1>             
         {allPackages.map(packages=>(
-             <div key={packages.service_name} className="card lg:card-side my-20 bg-base-100 shadow-xl">
+             <div key={packages._id} className="card lg:card-side my-20 bg-base-100 shadow-xl">
              <figure><img src={packages.service_image} alt="Album" /></figure>
              <div className="card-body">
                  <h2 className="card-title">{packages.service_name}</h2>
@@ -32,7 +32,7 @@ const AllServices = () => {
                  <p>{packages.service_price}</p>
                  <p>{packages.service_area}</p>
                  <div className="card-actions justify-end">
-                     <button className="btn btn-primary">View Details</button>
+                     <button className="btn btn-primary"><Link to={`/packageDetails/${packages._id}`}>View Details</Link></button>
                  </div>
              </div>
          </div>

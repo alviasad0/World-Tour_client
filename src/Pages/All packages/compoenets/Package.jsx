@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Package = ({ packegeas }) => {
     console.log(packegeas);
@@ -23,7 +24,7 @@ const Package = ({ packegeas }) => {
                                 <p>{packages.service_price}</p>
                                 <p>{packages.service_area}</p>
                                 <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">View Details</button>
+                                <button className="btn btn-primary"><Link to={`/packageDetails/${packages._id}`}>View Details</Link></button>
                                 </div>
                             </div>
                         </div>
