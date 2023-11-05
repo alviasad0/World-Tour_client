@@ -139,7 +139,7 @@ const AddProduct = () => {
                   <input
                     type="text"
                     // placeholder="Name"
-                    value={user?.displayName}
+                    defaultValue={user?.displayName}
                     name="name"
                     className="input input-bordered input-success w-full cursor-none"
                     readOnly
@@ -156,7 +156,7 @@ const AddProduct = () => {
                   <input
                     type="text"
                     // placeholder="Name"
-                    value={user?.photoURL}
+                    defaultValue={user?.photoURL}
                     name="providerImage"
                     className="input input-bordered input-success w-full cursor-none"
                     readOnly
@@ -174,7 +174,7 @@ const AddProduct = () => {
                   <input
                     type="email"
                     // placeholder="Email"
-                    value={user?.email}
+                    defaultValue={user?.email}
                     name="email"
                     className="input input-bordered input-success w-full cursor-none"
                     readOnly
@@ -229,7 +229,7 @@ const AddProduct = () => {
                 <br />
                 <input
                   type="submit"
-                  value="ADD PACKAGE"
+                  defaultValue="ADD PACKAGE"
                   className="btn btn-success w-full text-xl tracking-widest font-bold"
                 />
               </form>

@@ -90,7 +90,7 @@ const Details = () => {
                   <input
                     type="text"
                     // placeholder="Package Image url"
-                    value={packages.service_image}
+                    defaultValue={packages.service_image}
                     readOnly
                     name="image_url"
                     className="input input-bordered input-success w-full "
@@ -109,7 +109,7 @@ const Details = () => {
                     // placeholder="Package Name"
                     name="Package_name"
                     className="input input-bordered input-success w-full "
-                    value={packages.service_name}
+                    defaultValue={packages.service_name}
                     readOnly
                   />
                 </div>
@@ -123,7 +123,7 @@ const Details = () => {
                   <input
                     type="text"
                     // placeholder="Name"
-                    value={packages.service_provider_name}
+                    defaultValue={packages.service_provider_name}
                     name="name"
                     className="input input-bordered input-success w-full cursor-none"
                     readOnly
@@ -140,7 +140,7 @@ const Details = () => {
                   <input
                     type="text"
                     // placeholder="Name"
-                    value={packages.service_provider_email}
+                    defaultValue={packages.service_provider_email}
                     
                     name="providerEmail"
                     className="input input-bordered input-success w-full cursor-none"
@@ -160,7 +160,7 @@ const Details = () => {
                   <input
                     type="email"
                     // placeholder="Email"
-                    value={user?.email}
+                    defaultValue={user?.email}
                     name="email"
                     className="input input-bordered input-success w-full cursor-none"
                     readOnly
@@ -178,7 +178,7 @@ const Details = () => {
                     // placeholder="Price"
                     name="price"
                     className="input input-bordered input-success w-full "
-                    value={packages.service_price}
+                    defaultValue={packages.service_price}
                     readOnly
                   />
                 </div>
@@ -218,7 +218,7 @@ const Details = () => {
                 
                 <input
                   type="submit"
-                  value="PURCHASE"
+                  defaultValue="PURCHASE"
                   className="btn btn-success w-full text-xl tracking-widest font-bold"
                 />
               </form>

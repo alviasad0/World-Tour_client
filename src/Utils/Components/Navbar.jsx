@@ -45,8 +45,8 @@ const Navbar = () => {
                     <div className="dropdown dropdown-bottom">
                         <label tabIndex={0} className="border-none">Dashboard</label>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><Link to='/myService'>My_Service</Link></li>
-                            <li><Link to='/addService'>Add_Service</Link></li>
+                            <li><Link to='/myPackages'>My_Packages</Link></li>
+                            <li><Link to='/addService'>Add_Packages</Link></li>
                             <li><Link to='/mySchedules'>My_Schedules</Link></li>
                             
                         </ul>

@@ -12,6 +12,8 @@ import AllPackages from './Pages/All packages/AllPackages';
 import Details from './Pages/Details/Details';
 import PrivateRouter from './PrivateRoute/PrivateRouter';
 import AddProduct from './Pages/AddProduct/AddProduct';
+import MyPackages from './Pages/myPackage/MyPackages';
+import PackageUpdate from './Pages/PackageUpdate/PackageUpdate';
 
 
 const router = createBrowserRouter([
@@ -51,6 +53,25 @@ const router = createBrowserRouter([
             <AddProduct></AddProduct>
           </PrivateRouter>
         ),
+      },
+      {
+        path: "/updatePackage/:id",
+        element: (
+          <PrivateRouter>
+            <PackageUpdate></PackageUpdate>
+          </PrivateRouter>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/addPackage/${params.id}`),
+      },
+      {
+        path: "/myPackages",
+        element: (
+          <PrivateRouter>
+            <MyPackages></MyPackages>
+          </PrivateRouter>
+        ),
+        loader : ()=>fetch(`http://localhost:5000/addPackage`)
       },
     ]
   }
