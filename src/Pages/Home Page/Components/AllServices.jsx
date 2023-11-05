@@ -6,7 +6,7 @@ const AllServices = () => {
     const [packages , setAllPackages] = useState([])
     const allPackages= packages.slice(0, 4)
     useEffect(()=>{
-        fetch("services.json")
+        fetch("http://localhost:5000/allServices")
         .then(response => response.json())
         .then(data=>setAllPackages(data))
     },[])
@@ -38,7 +38,7 @@ const AllServices = () => {
          </div>
         ))}
         <div>
-            <button className="btn btn-primary"><Link to='/allPackages'>Show All Packages</Link></button>
+            <button className="btn btn-primary"><Link to='/'>Show All Packages</Link></button>
         </div>
         </div>
     );
