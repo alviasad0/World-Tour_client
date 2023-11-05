@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Navbar from "../../Utils/Components/Navbar";
 
 
 const Register = () => {
@@ -96,7 +97,7 @@ const Register = () => {
 
     return (
       <div>
-        
+        <Navbar></Navbar>
         <div
           data-aos="fade-down"
           data-aos-easing="linear"

@@ -6,6 +6,7 @@ import auth from './../../firebase/firebase.config';
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Navbar from "../../Utils/Components/Navbar";
 
 const Login = () => {
     const googleProvider = new GoogleAuthProvider();
@@ -65,6 +66,7 @@ const Login = () => {
     };
     return (
         <div>
+            <Navbar></Navbar>
            <div
           data-aos="fade-down"
           data-aos-easing="ease-out-cubic"

@@ -8,6 +8,7 @@ import Home from './Pages/Home Page/Home/Home.jsx';
 import Login from './Pages/Login Page/Login';
 import Register from './Pages/Register/Register';
 import AuthProvider from './Providers/AuthProvider';
+import AllPackages from './Pages/All packages/AllPackages';
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/allPackages",
+        element: <AllPackages></AllPackages>,
+        loader: ()=> fetch('http://localhost:5000/allServices')
       },
     ]
   }
