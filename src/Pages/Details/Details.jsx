@@ -76,7 +76,7 @@ const Details = () => {
                     <p>{packages.service_area}</p>
                     <div className="card-actions justify-end">
                         
-                        <button className="btn" onChange={() => document.getElementById('my_modal_4').showModal()}>Book  Now</button>
+                        <button className="btn" onClick={() => document.getElementById('my_modal_4').showModal()}>Book  Now</button>
                         <dialog id="my_modal_4" className="modal">
                             <div className="modal-box w-11/12 max-w-5xl">
                                 <div>

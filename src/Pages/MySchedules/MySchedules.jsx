@@ -1,17 +1,41 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Navbar from "../../Utils/Components/Navbar";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 const MySchedules = () => {
-    const packages = useLoaderData()
+    const  allBookings= useLoaderData()
     const { user } = useContext(AuthContext)
+    const [packages , setPackages] = useState(allBookings)
     const myPackages = packages.filter((card) => card.userEmail === user.email)
     console.log(packages);
     
+    
     const handleStatus = (_id) => {
         const statusField  = document.getElementById('status')
-        const status = statusField.value
+        const statusValue = statusField.value
         // console.log(_id, status)
+        fetch(`http://localhost:5000/booked/${_id}`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({status : statusValue}),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire(
+                        "Good job!",
+                        "Product has Updated in the database!",
+                        "success"
+                    )
+                   const remaining = packages.filter(packaga => packaga._id !== _id)
+                   const updated = packages.find(packege => packege._id === _id)
+                   const newPackage = [updated, ...remaining]
+                   setPackages(newPackage)
+                }
+            });
+        
     }
     return (
 
