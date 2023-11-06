@@ -110,7 +110,7 @@ const Navbar = () => {
                                                     {user.displayName}
                                                 </li>
                                                 <button
-                                                    onClick={logOut}
+                                                    onChange={logOut}
                                                     className=" btn  btn-success tracking-widest  w-full mt-3 "
                                                 >
                                                     Log Out
@@ -158,7 +158,7 @@ const Navbar = () => {
                                         <p className="font-semibold">{user?.displayName}</p>
                                     </div>
                                     <button
-                                        onClick={logOut}
+                                        onChange={logOut}
                                         className=" btn  btn-success tracking-widest text-lg font-bold invisible md:visible "
                                     >
                                         Log Out

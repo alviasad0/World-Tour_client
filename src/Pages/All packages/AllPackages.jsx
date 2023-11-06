@@ -44,7 +44,7 @@ const AllPackages = () => {
                 <h1 className="text-center">this is the all packages section </h1>
                 <form onSubmit={handleSerachInput } className="flex justify-center pt-10">
                                     <input type="text" placeholder="Type here" className="input w-full max-w-xs  " name="searchInputField" />
-                                    <button onClick={()=>setIsSearch(!isSearch)} type="submit" className="btn bg-[#FF444A] btn-primary border-none" >Search</button>
+                                    <button onChange={()=>setIsSearch(!isSearch)} type="submit" className="btn bg-[#FF444A] btn-primary border-none" >Search</button>
                                 </form>
 
 

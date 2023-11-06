@@ -218,7 +218,7 @@ const Register = () => {
                       </p>
                       <div>
                         <button
-                          onClick={handleGoogleLogin}
+                          onChange={handleGoogleLogin}
                           className="mt-6 btn bg-green-100 w-full  border-green-600 space-x-3 tracking-widest"
                         >
                           <FcGoogle className="text-2xl"></FcGoogle>

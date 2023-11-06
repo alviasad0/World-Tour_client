@@ -14,6 +14,7 @@ import PrivateRouter from './PrivateRoute/PrivateRouter';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import MyPackages from './Pages/myPackage/MyPackages';
 import PackageUpdate from './Pages/PackageUpdate/PackageUpdate';
+import MySchedules from './Pages/MySchedules/MySchedules';
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,15 @@ const router = createBrowserRouter([
             <AddProduct></AddProduct>
           </PrivateRouter>
         ),
+      },
+      {
+        path: "/mySchedules",
+        element: (
+          <PrivateRouter>
+            <MySchedules></MySchedules>
+          </PrivateRouter>
+        ),
+        loader : ()=>fetch(`http://localhost:5000/booked`)
       },
       {
         path: "/updatePackage/:id",

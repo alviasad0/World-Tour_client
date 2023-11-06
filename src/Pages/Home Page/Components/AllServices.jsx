@@ -38,7 +38,7 @@ const AllServices = () => {
          </div>
         ))}
         <div>
-            <button className="btn btn-primary"><Link to='/'>Show All Packages</Link></button>
+            <button className="btn btn-primary"><Link to='/allPackages'>Show All Packages</Link></button>
         </div>
         </div>
     );

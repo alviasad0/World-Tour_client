@@ -146,7 +146,7 @@ const Login = () => {
                   <p className="text-3xl font-bold text-center "> Login with</p>
                   <div>
                     <button
-                      onClick={handleGoogleLogin}
+                      onChange={handleGoogleLogin}
                       className="mt-6 bg-green-100 btn w-full  border-green-600 space-x-3 tracking-widest"
                     >
                       <FcGoogle className="text-2xl"></FcGoogle>

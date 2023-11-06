@@ -59,7 +59,7 @@ const MyPackages = () => {
                                 <p> Provider Name :{items.name}</p>
                                 <div className="card-actions justify-end">
                                     <button className="btn btn-primary"><Link to={`/updatePackage/${items._id}`} >Update</Link></button>
-                                    <button className="btn btn-primary" onClick={() => handleDeleteBtn(items._id)}>Delete</button>
+                                    <button className="btn btn-primary" onChange={() => handleDeleteBtn(items._id)}>Delete</button>
                                 </div>
                             </div>
                         </div>
