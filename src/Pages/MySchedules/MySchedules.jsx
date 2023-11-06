@@ -11,7 +11,7 @@ const MySchedules = () => {
     const handleStatus = (_id) => {
         const statusField  = document.getElementById('status')
         const status = statusField.value
-        console.log(_id, status)
+        // console.log(_id, status)
     }
     return (
 
