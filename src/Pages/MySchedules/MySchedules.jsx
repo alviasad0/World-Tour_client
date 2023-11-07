@@ -3,6 +3,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Navbar from "../../Utils/Components/Navbar";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 const MySchedules = () => {
     const  allBookings= useLoaderData()
     const { user } = useContext(AuthContext)
@@ -38,7 +39,7 @@ const MySchedules = () => {
         
     }
     return (
-
+<RouteWithTitleUpdate element={
 
         <div>
             <Navbar></Navbar>
@@ -158,6 +159,8 @@ const MySchedules = () => {
             </div>
 
         </div>
+} title="My_Schedules" />
+
     );
 };
 

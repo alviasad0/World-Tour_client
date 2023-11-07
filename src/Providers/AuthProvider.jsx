@@ -54,6 +54,8 @@ import {
       const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
         setuser(currentUser);
         setLoading(false);
+
+        /* if user exists then issue a json web token  */
       });
       return () => {
         unsubscribe();

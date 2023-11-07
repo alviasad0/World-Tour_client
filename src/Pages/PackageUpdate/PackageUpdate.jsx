@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import Navbar from "../../Utils/Components/Navbar";
 
 import { useLoaderData } from "react-router-dom";
+import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 
 
 
@@ -47,6 +48,8 @@ const PackageUpdate = () => {
             
     };
     return (
+        <RouteWithTitleUpdate element={
+
         <div>
             <Navbar></Navbar>
             <h1 className="text-center text-3xl font-bold"></h1>
@@ -226,6 +229,7 @@ const PackageUpdate = () => {
                 </div>
             </div>
         </div>
+        } title="Package_Update" />
     );
 };
 

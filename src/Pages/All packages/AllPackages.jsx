@@ -3,6 +3,7 @@ import Navbar from "../../Utils/Components/Navbar";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import Package from "./compoenets/Package";
+import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 const AllPackages = () => {
     const allPackages = useLoaderData()
 
@@ -38,6 +39,8 @@ const AllPackages = () => {
 }
     console.log(allPackages);
     return (
+        <RouteWithTitleUpdate element={
+
         <div>
             <Navbar></Navbar>
             <div className="container mx-auto">
@@ -61,6 +64,7 @@ const AllPackages = () => {
            }
         </div>
         </div>
+        } title="All_Packages" />
     );
 };
 

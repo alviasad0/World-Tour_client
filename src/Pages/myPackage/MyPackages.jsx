@@ -3,6 +3,7 @@ import Navbar from "../../Utils/Components/Navbar";
 import { useLoaderData , Link} from "react-router-dom"
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 const MyPackages = () => {
     const packages = useLoaderData()
     const { user } = useContext(AuthContext)
@@ -43,6 +44,8 @@ const MyPackages = () => {
       console.log(user);
 
     return (
+      <RouteWithTitleUpdate element={
+
         <div>
             <Navbar></Navbar>
             <h1 className="text-center text-4xl font-bold">this is the my package section </h1>
@@ -67,6 +70,7 @@ const MyPackages = () => {
                 }
             </div>
         </div>
+      } title="My_Packages" />
     );
 };
 

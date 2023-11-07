@@ -7,6 +7,7 @@ import { FcGoogle } from "react-icons/fc";
 import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Navbar from "../../Utils/Components/Navbar";
+import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 
 const Login = () => {
     const googleProvider = new GoogleAuthProvider();
@@ -44,6 +45,8 @@ const Login = () => {
 
     /* google login */
     const handleGoogleLogin = () => {
+      console.log("Google mama  coming");
+
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 Swal.fire({
@@ -62,9 +65,10 @@ const Login = () => {
                 });
                 console.log(error.message);
             });
-        console.log("Google mama  coming");
     };
     return (
+      <RouteWithTitleUpdate element={
+
         <div>
             <Navbar></Navbar>
            <div
@@ -146,7 +150,7 @@ const Login = () => {
                   <p className="text-3xl font-bold text-center "> Login with</p>
                   <div>
                     <button
-                      onChange={handleGoogleLogin}
+                      onClick={handleGoogleLogin}
                       className="mt-6 bg-green-100 btn w-full  border-green-600 space-x-3 tracking-widest"
                     >
                       <FcGoogle className="text-2xl"></FcGoogle>
@@ -195,6 +199,7 @@ const Login = () => {
           </div>
         </div>
         </div>
+      } title="LogIn" />
     );
 };
 

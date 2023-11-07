@@ -7,6 +7,7 @@ import { FcGoogle } from "react-icons/fc";
 import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Navbar from "../../Utils/Components/Navbar";
+import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 
 
 const Register = () => {
@@ -96,6 +97,8 @@ const Register = () => {
     };
 
     return (
+      <RouteWithTitleUpdate element={
+
       <div>
         <Navbar></Navbar>
         <div
@@ -270,6 +273,7 @@ const Register = () => {
         </div>
         
       </div>
+      } title="Register" />
     );
 };
 

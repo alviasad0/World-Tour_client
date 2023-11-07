@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import Navbar from "../../Utils/Components/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 
 
 const AddProduct = () => {
@@ -50,6 +51,8 @@ const AddProduct = () => {
    };
   console.log(user);
   return (
+    <RouteWithTitleUpdate element={
+
     <div>
       <Navbar></Navbar>
       <h1 className="text-center text-3xl font-bold"></h1>
@@ -238,6 +241,7 @@ const AddProduct = () => {
         </div>
       </div>
     </div>
+    } title="Add_Package" />
   );
 };
 
