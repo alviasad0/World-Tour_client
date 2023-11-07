@@ -15,6 +15,9 @@ import MyPackages from './Pages/myPackage/MyPackages';
 import PackageUpdate from './Pages/PackageUpdate/PackageUpdate';
 import MySchedules from './Pages/MySchedules/MySchedules';
 import React from 'react';
+import AboutUs from './Pages/AboutUs/AboutUs';
+import ContactUs from './Pages/Contact Us/ContactUs';
+import TermsAndConditions from './Pages/Terms and Conditions/TermsAndConditions';
 
 
 const router = createBrowserRouter([
@@ -34,6 +37,18 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/aboutUs",
+        element: <AboutUs></AboutUs>
+      },
+      {
+        path: "/contact",
+        element: <ContactUs></ContactUs>
+      },
+      {
+        path: "/terms",
+        element: <TermsAndConditions></TermsAndConditions>
       },
       {
         path: "/allPackages",

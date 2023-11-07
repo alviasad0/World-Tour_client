@@ -4,6 +4,7 @@ import Navbar from "../../Utils/Components/Navbar";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
+import Footer from "../../Utils/Components/Footer";
 const MySchedules = () => {
     const  allBookings= useLoaderData()
     const { user } = useContext(AuthContext)
@@ -157,7 +158,7 @@ const MySchedules = () => {
                 </div>
 
             </div>
-
+        <Footer></Footer>
         </div>
 } title="My_Schedules" />
 

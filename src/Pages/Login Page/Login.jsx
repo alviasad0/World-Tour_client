@@ -8,6 +8,7 @@ import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Navbar from "../../Utils/Components/Navbar";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
+import Footer from "../../Utils/Components/Footer";
 
 const Login = () => {
     const googleProvider = new GoogleAuthProvider();
@@ -198,6 +199,7 @@ const Login = () => {
             </div>
           </div>
         </div>
+        <Footer></Footer>
         </div>
       } title="LogIn" />
     );

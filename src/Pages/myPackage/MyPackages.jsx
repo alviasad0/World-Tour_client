@@ -4,6 +4,7 @@ import { useLoaderData , Link} from "react-router-dom"
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
+import Footer from "../../Utils/Components/Footer";
 const MyPackages = () => {
     const packages = useLoaderData()
     const { user } = useContext(AuthContext)
@@ -69,6 +70,7 @@ const MyPackages = () => {
                     ))
                 }
             </div>
+            <Footer></Footer>
         </div>
       } title="My_Packages" />
     );

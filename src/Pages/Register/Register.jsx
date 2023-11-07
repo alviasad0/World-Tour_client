@@ -8,6 +8,7 @@ import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Navbar from "../../Utils/Components/Navbar";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
+import Footer from "../../Utils/Components/Footer";
 
 
 const Register = () => {
@@ -221,7 +222,7 @@ const Register = () => {
                       </p>
                       <div>
                         <button
-                          onChange={handleGoogleLogin}
+                          onClick={handleGoogleLogin}
                           className="mt-6 btn bg-green-100 w-full  border-green-600 space-x-3 tracking-widest"
                         >
                           <FcGoogle className="text-2xl"></FcGoogle>
@@ -271,7 +272,7 @@ const Register = () => {
             </div>
           </div>
         </div>
-        
+        <Footer></Footer>
       </div>
       } title="Register" />
     );

@@ -3,6 +3,7 @@ import Navbar from "../../Utils/Components/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
+import Footer from "../../Utils/Components/Footer";
 
 
 const AddProduct = () => {
@@ -240,6 +241,7 @@ const AddProduct = () => {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
     } title="Add_Package" />
   );

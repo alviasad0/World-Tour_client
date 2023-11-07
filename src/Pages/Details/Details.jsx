@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
+import Footer from "../../Utils/Components/Footer";
 
 const Details = () => {
   const card = useLoaderData()
@@ -312,6 +313,7 @@ const Details = () => {
             ))
           }
         </div>
+        <Footer></Footer>
       </div>
         
     } title="Details" />

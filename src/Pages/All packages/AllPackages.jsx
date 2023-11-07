@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import Package from "./compoenets/Package";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
+import Footer from "../../Utils/Components/Footer";
 const AllPackages = () => {
     const allPackages = useLoaderData()
 
@@ -63,6 +64,7 @@ const AllPackages = () => {
             <Package packegeas={searchPackage}></Package>
            }
         </div>
+        <Footer></Footer>
         </div>
         } title="All_Packages" />
     );

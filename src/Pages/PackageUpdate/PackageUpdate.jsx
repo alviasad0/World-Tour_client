@@ -3,6 +3,7 @@ import Navbar from "../../Utils/Components/Navbar";
 
 import { useLoaderData } from "react-router-dom";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
+import Footer from "../../Utils/Components/Footer";
 
 
 
@@ -228,6 +229,7 @@ const PackageUpdate = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
         } title="Package_Update" />
     );
