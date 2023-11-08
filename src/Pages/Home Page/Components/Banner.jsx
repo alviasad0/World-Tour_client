@@ -31,7 +31,8 @@ const Banner = () => {
                   data-aos-duration="3000"
                 >
                   <h2 className="text-6xl ">
-                    Wanderlust Wonders: <span className="font-bold">{text}</span>
+                    Wanderlust Wonders:{" "}
+                    <span className="font-bold">{text}</span>
                   </h2>
                   <p className="text-lg font-medium">
                     Unleash your wanderlust and start exploring the world
@@ -67,7 +68,8 @@ const Banner = () => {
               <div className=" absolute flex gap-6 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] left-0 lg:pl-[120px]   items-center h-full w-full">
                 <div className="text-white font-bold space-y-8 w-1/3">
                   <h2 className="text-6xl ">
-                    Wanderlust Wonders: Explore the World with Us
+                    Wanderlust Wonders:{" "}
+                    <span className="font-bold">{text}</span>
                   </h2>
                   <p className="text-lg font-medium">
                     Unleash your wanderlust and start exploring the world
@@ -103,7 +105,8 @@ const Banner = () => {
               <div className=" absolute flex gap-6 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] left-0 lg:pl-[120px]   items-center h-full w-full">
                 <div className="text-white font-bold space-y-8 w-1/3">
                   <h2 className="text-6xl ">
-                    Wanderlust Wonders: Explore the World with Us
+                    Wanderlust Wonders:{" "}
+                    <span className="font-bold">{text}</span>
                   </h2>
                   <p className="text-lg font-medium">
                     Unleash your wanderlust and start exploring the world
@@ -139,7 +142,8 @@ const Banner = () => {
               <div className=" absolute flex gap-6 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] left-0 lg:pl-[120px]   items-center h-full w-full">
                 <div className="text-white font-bold space-y-8 w-1/3">
                   <h2 className="text-6xl ">
-                    Wanderlust Wonders: Explore the World with Us
+                    Wanderlust Wonders:{" "}
+                    <span className="font-bold">{text}</span>
                   </h2>
                   <p className="text-lg font-medium">
                     Unleash your wanderlust and start exploring the world
