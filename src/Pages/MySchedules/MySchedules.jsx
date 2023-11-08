@@ -6,6 +6,8 @@ import Swal from "sweetalert2";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 import Footer from "../../Utils/Components/Footer";
 const MySchedules = () => {
+
+  
     const  allBookings= useLoaderData()
     const { user } = useContext(AuthContext)
     const [packages , setPackages] = useState(allBookings)
@@ -45,25 +47,40 @@ const MySchedules = () => {
           <div>
             <Navbar></Navbar>
             <div className="max-w-screen-2xl mx-auto ">
-              <h1 className="text-center text-5xl font-bold">Packages that you have Booked  </h1>
+              <h1 className="text-center text-5xl font-bold">
+                Packages that you have Booked{" "}
+              </h1>
               {/* book mark section */}
-              <div>
+              <div className="">
                 {myPackages.length > 0 ? (
                   myPackages.map((pak) => (
-                    <div key={pak._id}>
-                      <div>
-                        <div className="card w-96 bg-base-100 shadow-xl">
-                          <figure>
-                            <img src={pak.image_url} alt="Shoes" />
-                          </figure>
-                          <div className="card-body">
-                            <h2 className="card-title">{pak.Package_name}</h2>
-                            <p>{pak.price}</p>
-                            <p>{pak.service_area}</p>
-                            <p>{pak.providerEmail}</p>
-                            <p>{pak.userEmail}</p>
-                          </div>
-                        </div>
+                    <div
+                      data-aos="fade-right"
+                      data-aos-easing="linear"
+                      data-aos-duration="3000"
+                      key={pak._id}
+                      className="card lg:card-side h-[350px] mt-10 bg-blue-50 border-blue-400 border-2"
+                    >
+                      <figure className="flex-1">
+                        <img src={pak.image_url} alt="Album" />
+                      </figure>
+                      <div className="card-body flex-1">
+                        <h2 className="text-4xl font-semibold">
+                          {pak.Package_name}
+                        </h2>
+
+                        <p className="text-xl font-bold  pt-4">
+                          Location : {pak.service_area}
+                        </p>
+                        <p className="text-xl font-bold  pt-4">
+                          Event Date : {pak.service_date}
+                        </p>
+                        <p className="text-2xl font-medium text-black">
+                          Price :{" "}
+                          <span className="text-4xl font-bold text-blue-600">
+                            {pak.price}
+                          </span>
+                        </p>
                       </div>
                     </div>
                   ))
@@ -81,7 +98,10 @@ const MySchedules = () => {
                 )}
 
                 {/* booking pending section */}
-                <div className="pb-20">
+                <div className="py-20">
+                  <h1 className="text-center text-5xl pb-10 font-bold">
+                    Status of your booked packages
+                  </h1>
                   {myPackages.length > 0 ? (
                     <div className="overflow-x-auto">
                       <table className="table">
@@ -120,26 +140,32 @@ const MySchedules = () => {
                                 </div>
                               </td>
                               <td>
-                                {booking.Package_name}
+                                <span className="text-lg font-bold">
+                                  {booking.Package_name}
+                                </span>
                                 <br />
-                                <span className="badge  badge-sm">
+                                <span className=" text-info ">
                                   {booking.providerEmail}
                                 </span>
                               </td>
-                              <td>{booking.service_date}</td>
-                              <td>{booking.service_area}</td>
+                              <td className="text-lg font-bold">
+                                {booking.service_date}
+                              </td>
+                              <td className="text-lg font-bold">
+                                {booking.service_area}
+                              </td>
 
                               <th>
                                 <select
                                   onChange={() => handleStatus(booking._id)}
                                   defaultValue={booking.status}
-                                  className="select btn btn-primary"
+                                  className="select btn btn-info"
                                   id="status"
                                 >
-                                  <option className="btn btn-primary">
+                                  <option className="btn btn-info">
                                     Pending
                                   </option>
-                                  <option className="btn btn-primary">
+                                  <option className="btn btn-info">
                                     In Progress
                                   </option>
                                   <option>Completed</option>

@@ -106,7 +106,7 @@ const Register = () => {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1500"
-          className="bg-green-50 container mx-auto md:p-10 mt-10 rounded-lg"
+          className="bg-blue-100 container mx-auto md:p-10 mt-10 rounded-lg"
         >
           <div className="text-center ">
             <h1 className="text-5xl text-black font-bold">Register now!</h1>
@@ -128,7 +128,7 @@ const Register = () => {
                   <input
                     type="text"
                     placeholder="Name"
-                    className="input input-bordered input-success"
+                    className="input input-bordered input-info"
                     name="name"
                     required
                   />
@@ -142,7 +142,7 @@ const Register = () => {
                   <input
                     type="text"
                     placeholder="URL"
-                    className="input input-bordered input-success"
+                    className="input input-bordered input-info"
                     name="userPic"
                     required
                   />
@@ -156,7 +156,7 @@ const Register = () => {
                   <input
                     type="email"
                     placeholder="email"
-                    className="input input-bordered input-success"
+                    className="input input-bordered input-info"
                     name="email"
                     required
                   />
@@ -170,7 +170,7 @@ const Register = () => {
                   <input
                     type="password"
                     placeholder="password"
-                    className="input input-bordered input-success"
+                    className="input input-bordered input-info"
                     name="password"
                     required
                   />
@@ -184,13 +184,13 @@ const Register = () => {
                   <input
                     type="password"
                     placeholder="Confirm password"
-                    className="input input-bordered input-success"
+                    className="input input-bordered input-info"
                     name="password2"
                     required
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-success text-xl  font-bold tracking-widest">
+                  <button className="btn btn-info text-xl  font-bold tracking-widest">
                     Register
                   </button>
                 </div>
@@ -198,7 +198,7 @@ const Register = () => {
                   Already have an account ?
                   <Link
                     to="/login"
-                    className="text-green-600 text-xl font-bold"
+                    className="text-blue-600 text-xl font-bold"
                   >
                     Login
                   </Link>
@@ -223,12 +223,12 @@ const Register = () => {
                       <div>
                         <button
                           onClick={handleGoogleLogin}
-                          className="mt-6 btn bg-green-100 w-full  border-green-600 space-x-3 tracking-widest"
+                          className="mt-6 btn bg-blue-100 w-full  border-blue-600 space-x-3 tracking-widest"
                         >
                           <FcGoogle className="text-2xl"></FcGoogle>
                           <span className="text-lg font-bold">Google</span>
                         </button>
-                        <button className="mt-2 btn bg-green-100 w-full border-green-600 space-x-3 tracking-widest">
+                        <button className="mt-2 btn bg-blue-100 w-full border-blue-600 space-x-3 tracking-widest">
                           <BsGithub className="text-2xl"></BsGithub>
                           <span className="text-lg font-bold">Github</span>
                         </button>
@@ -236,8 +236,8 @@ const Register = () => {
                     </div>
                     <div className="mt-8 text-center">
                       <h1 className="text-3xl font-bold">Find Us On</h1>
-                      <div className="border-green-400 border-2 mt-6">
-                        <div className=" border-green-400 border-b-2 p-4">
+                      <div className="border-blue-400 border-2 mt-6">
+                        <div className=" border-blue-400 border-b-2 p-4">
                           <a
                             href=""
                             className="flex text-xl pl-10 font-semibold items-center gap-2"
@@ -246,7 +246,7 @@ const Register = () => {
                             <span>FaceBook</span>
                           </a>
                         </div>
-                        <div className="border-green-400  border-b-2 p-4">
+                        <div className="border-blue-400  border-b-2 p-4">
                           <a
                             href=""
                             className="flex text-xl pl-10 font-semibold items-center gap-2"

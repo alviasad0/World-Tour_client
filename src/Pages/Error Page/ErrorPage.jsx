@@ -14,7 +14,7 @@ const ErrorPage = () => {
           />
 
           <div className="flex justify-center">
-            <button className=" btn btn-secondary">
+            <button className=" btn btn-info">
               <Link>GO Back To Home</Link>
             </button>
           </div>

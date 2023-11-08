@@ -76,7 +76,7 @@ const Login = () => {
           data-aos="fade-down"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1500"
-          className="bg-green-50 container mx-auto md:p-10 mt-10 rounded-lg"
+          className="bg-blue-100 container mx-auto md:p-10 mt-10 rounded-lg"
         >
           <div className="text-center ">
             <h1
@@ -105,7 +105,7 @@ const Login = () => {
                   <input
                     type="email"
                     placeholder="email"
-                    className="input input-bordered input-success"
+                    className="input input-bordered input-info"
                     name="email"
                     required
                   />
@@ -119,13 +119,13 @@ const Login = () => {
                   <input
                     type="password"
                     placeholder="password"
-                    className="input input-bordered input-success"
+                    className="input input-bordered input-info"
                     name="password"
                     required
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-success  tracking-widest text-2xl">
+                  <button className="btn btn-info  tracking-widest text-2xl">
                     Login
                   </button>
                 </div>
@@ -133,7 +133,7 @@ const Login = () => {
                   Do not have an account ?{" "}
                   <Link
                     to="/register"
-                    className="text-green-600 text-xl font-bold"
+                    className="text-blue-600 text-xl font-bold"
                   >
                     {" "}
                     Register
@@ -152,12 +152,12 @@ const Login = () => {
                   <div>
                     <button
                       onClick={handleGoogleLogin}
-                      className="mt-6 bg-green-100 btn w-full  border-green-600 space-x-3 tracking-widest"
+                      className="mt-6 bg-blue-100 btn w-full  border-blue-600 space-x-3 tracking-widest"
                     >
                       <FcGoogle className="text-2xl"></FcGoogle>
                       <span className="text-lg font-bold">Google</span>
                     </button>
-                    <button className="mt-2 btn bg-green-100 w-full border-green-600 space-x-3 tracking-widest">
+                    <button className="mt-2 btn bg-blue-100 w-full border-blue-600 space-x-3 tracking-widest">
                       <BsGithub className="text-2xl"></BsGithub>
                       <span className="text-lg font-bold">Github</span>
                     </button>
@@ -165,8 +165,8 @@ const Login = () => {
                 </div>
                 <div className="mt-8 text-center">
                   <h1 className="text-3xl font-bold">Find Us On</h1>
-                  <div className="border-green-400 border-2 mt-6">
-                    <div className=" border-green-400 border-b-2 p-4">
+                  <div className="border-blue-400 border-2 mt-6">
+                    <div className=" border-blue-400 border-b-2 p-4">
                       <a
                         href=""
                         className="flex text-xl pl-10 font-semibold items-center gap-2"
@@ -175,7 +175,7 @@ const Login = () => {
                         <span>FaceBook</span>
                       </a>
                     </div>
-                    <div className="border-green-400  border-b-2 p-4">
+                    <div className="border-blue-400  border-b-2 p-4">
                       <a
                         href=""
                         className="flex text-xl pl-10 font-semibold items-center gap-2"
