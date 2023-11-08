@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
+import { useTypewriter } from "react-simple-typewriter";
 
 
 const Banner = () => {
+   const [text] = useTypewriter({
+     words: ["Explore", "The", "World", "With", "Us!"],
+     loop: 0,
+     delaySpeed:1500,
+   });
     return (
       <div
         data-aos="fade-right"
@@ -25,7 +31,7 @@ const Banner = () => {
                   data-aos-duration="3000"
                 >
                   <h2 className="text-6xl ">
-                    Wanderlust Wonders: Explore the World with Us
+                    Wanderlust Wonders: <span className="font-bold">{text}</span>
                   </h2>
                   <p className="text-lg font-medium">
                     Unleash your wanderlust and start exploring the world
