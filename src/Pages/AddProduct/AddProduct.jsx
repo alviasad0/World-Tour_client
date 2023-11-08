@@ -5,10 +5,8 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 import Footer from "../../Utils/Components/Footer";
 
-
 const AddProduct = () => {
-    const { user } = useContext(AuthContext);
-
+  const { user } = useContext(AuthContext);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -28,11 +26,11 @@ const AddProduct = () => {
       service_area,
       price,
       short_description,
-      email ,
+      email,
       Package_name,
     };
     console.log(product);
-    fetch("http://localhost:5000/addPackage", {
+    fetch("https://world-tour-server-red.vercel.app/addPackage", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(product),
@@ -49,7 +47,7 @@ const AddProduct = () => {
           form.reset();
         }
       });
-   };
+  };
   console.log(user);
   return (
     <RouteWithTitleUpdate

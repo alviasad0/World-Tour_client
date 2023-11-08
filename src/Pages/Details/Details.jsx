@@ -8,22 +8,25 @@ import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpd
 import Footer from "../../Utils/Components/Footer";
 
 const Details = () => {
-  const card = useLoaderData()
-  const { user } = useContext(AuthContext)
-  const [allData, setAllData] = useState([])
+  const card = useLoaderData();
+  const { user } = useContext(AuthContext);
+  const [allData, setAllData] = useState([]);
 
-  const moreFromProvider = allData.filter(data => data.service_provider_email === card.service_provider_email && data._id !==card._id
-     )
+  const moreFromProvider = allData.filter(
+    (data) =>
+      data.service_provider_email === card.service_provider_email &&
+      data._id !== card._id
+  );
 
-     const restPackages = allData.filter(data => data._id !== card._id)
-    console.log(moreFromProvider)
-    console.log(card);
+  const restPackages = allData.filter((data) => data._id !== card._id);
+  console.log(moreFromProvider);
+  console.log(card);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allServices")
-      .then(response => response.json())
-      .then(data => setAllData(data))
-  }, [])
+    fetch("https://world-tour-server-red.vercel.app/allServices")
+      .then((response) => response.json())
+      .then((data) => setAllData(data));
+  }, []);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -43,10 +46,10 @@ const Details = () => {
       price,
       userEmail,
       Package_name,
-      service_date
+      service_date,
     };
     console.log(product);
-    fetch("http://localhost:5000/booked", {
+    fetch("https://world-tour-server-red.vercel.app/booked", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(product),
