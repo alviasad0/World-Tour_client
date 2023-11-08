@@ -5,7 +5,7 @@
 
 
 ---------------------------------
-# 5 features 
+# Some  features 
 * MongoDB : I have used mongodb as a database in my website . So that my website has its own        database . I can store the data in the database . No fake json data used in the whole website . You can add data in the database through the website . 
 
 * Express : I have used Express in the website. So i have a own server in my website . For this a can access the mondb and the website with this express .
@@ -25,3 +25,7 @@
 * CURD operations : The website backend side is mostly coded with CURD operations. As you know , CRUD operations are used to get or post or update or delete data from the databse by server . All data are that are showing are from the mongodb databse which are get methods used to get those data. In the Add Packages section you can add packages. Which is a create operation . i have used post to create those data in the databse . In the  my package page there are 2 button, one is update and another is delete . the function of update button eas coded with patch and delete button function was coded with delete method.
 
 * environment variables : The environment variables are used to configure the backend server user credentials like mongodb batabase username and password and the firebase configs are  keep safe . i have installed dotenv in my both backend and the frontend side . for this i have made the website credentials little much safer and they are not now pushed in github .
+
+* React Simple TypeWritter : I have uesd react-simple-typeWritter in the banner section . Which made the website more attractive.
+
+* React Framer Motion : I have used React Framer Motion in the website . Mainly in the home page there is a scrollBar on the top of the screen . It has made the website more atractive .  
