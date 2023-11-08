@@ -5,9 +5,10 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 import Footer from "../../Utils/Components/Footer";
 
+
 const AddProduct = () => {
   const { user } = useContext(AuthContext);
-
+  
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -53,6 +54,7 @@ const AddProduct = () => {
     <RouteWithTitleUpdate
       element={
         <div>
+          
           <Navbar></Navbar>
 
           {/* main */}
