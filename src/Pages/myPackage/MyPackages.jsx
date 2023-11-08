@@ -6,10 +6,10 @@ import Swal from "sweetalert2";
 import RouteWithTitleUpdate from "../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 import Footer from "../../Utils/Components/Footer";
 const MyPackages = () => {
-    const packages = useLoaderData()
+    const items = useLoaderData()
     const { user } = useContext(AuthContext)
-    const myPackages = packages.filter((p) => p.email === user.email)
-    console.log(packages, packages);
+    const myPackages = items.filter((p) => p.email === user.email)
+    console.log(items, items);
     const [addedPackegs, setAddeddPackeges] = useState(myPackages);
     const handleDeleteBtn = (_id) => {
         Swal.fire({
@@ -45,34 +45,85 @@ const MyPackages = () => {
       console.log(user);
 
     return (
-      <RouteWithTitleUpdate element={
-
-        <div>
+      <RouteWithTitleUpdate
+        element={
+          <div>
             <Navbar></Navbar>
-            <h1 className="text-center text-4xl font-bold">this is the my package section </h1>
-            <div>
-                {
-                    addedPackegs.map(items => (
-                        <div key={items._id} className="card card-compact w-96 bg-base-100 shadow-xl">
-                            <figure><img src={items.image_url} alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">{items.Package_name}</h2>
-                                <p>{items.short_description}</p>
-                                <p>Location: {items.service_area}</p>
-                                <p>Price : ${items.price}</p>
-                                <p> Provider Name :{items.name}</p>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-primary"><Link to={`/updatePackage/${items._id}`} >Update</Link></button>
-                                    <button className="btn btn-primary" onChange={() => handleDeleteBtn(items._id)}>Delete</button>
-                                </div>
-                            </div>
+            <div
+              className="max-w-screen-2xl mx-auto  "
+              data-aos="fade-right"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <h1
+                className="text-center text-5xl font-bold pb-20"
+                data-aos="fade-left"
+                data-aos-easing="linear"
+                data-aos-duration="3000"
+              >
+                Package that you have added{" "}
+              </h1>
+              <div
+                data-aos="fade-left"
+                data-aos-easing="linear"
+                data-aos-duration="3000"
+              >
+                {addedPackegs.map((items) => (
+                  <div
+                    key={items.service_name}
+                    className="card lg:card-side mt-10 bg-blue-50 border-blue-400 border-2"
+                  >
+                    <figure className="flex-1">
+                      <img src={items.image_url} alt="Album" />
+                    </figure>
+                    <div className="card-body flex-1">
+                      <h2 className="text-4xl font-semibold">
+                        {items.Package_name}
+                      </h2>
+                      <div className="flex items-center gap-10 pt-4">
+                        <div className="w-24 avatar">
+                          <img className="rounded" src={items.providerImage} />
                         </div>
-                    ))
-                }
+                        <div>
+                          <h1 className="font-bold text-lg">{items.name}</h1>
+                          <h1 className="font-medium ">{items.email}</h1>
+                        </div>
+                      </div>
+                      <p className="text-lg text-gray-700 pt-4">
+                        {items.service_description}
+                      </p>
+                      <p className="text-xl font-medium text- pt-4">
+                        Location :{items.service_area}
+                      </p>
+
+                      <p className="text-2xl font-medium text-black">
+                        Price :{" "}
+                        <span className="text-4xl font-bold text-blue-600">
+                          {items.price} $
+                        </span>
+                      </p>
+
+                      <div className="card-actions justify-end">
+                        <button className="btn tracking-widest btn-success bg-blue-300 border-blue-600 text-lg border-2 text-blue-800 font-semibold">
+                          <Link to={`/updatePackage/${items._id}`}>Update</Link>
+                        </button>
+                        <button
+                          className="btn tracking-widest btn-success bg-red-300 border-red-600 text-lg border-2 text-red-800 font-semibold"
+                          onClick={() => handleDeleteBtn(items._id)}
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             <Footer></Footer>
-        </div>
-      } title="My_Packages" />
+          </div>
+        }
+        title="My_Packages"
+      />
     );
 };
 

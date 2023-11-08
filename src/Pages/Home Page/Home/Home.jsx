@@ -1,22 +1,32 @@
+// import { FcQuestions } from "react-icons/fc"
 import RouteWithTitleUpdate from "../../../RouterWithTitleUpdate/RouterWithTitleUpdate";
 import Footer from "../../../Utils/Components/Footer";
 import Navbar from "../../../Utils/Components/Navbar";
 import AllServices from "../Components/AllServices";
 // import AllServices from "../Components/AllServices";
 import Banner from "../Components/Banner";
+import WhyChoose from "../Components/WhyChoose/WhyChoose";
+import FaqSection from "../../FAQ/FaqSection";
 
 const Home = () => {
     return (
-        <RouteWithTitleUpdate element={
-
-        <div>
+      <RouteWithTitleUpdate
+        element={
+          <div>
             <Navbar></Navbar>
-            <h1 className="text-center text-4xl">this is the home</h1>
-            <Banner></Banner>
-            <AllServices></AllServices>
+            <div className="max-w-screen-2xl mx-auto  rounded-xl pb-5">
+              <Banner></Banner>
+              <div className="px-10">
+                <AllServices></AllServices>
+              </div>
+                    <WhyChoose></WhyChoose>
+                    <FaqSection></FaqSection>
+                    </div>
             <Footer></Footer>
-        </div>
-        } title="Home" />
+          </div>
+        }
+        title="Home"
+      />
     );
 };
 

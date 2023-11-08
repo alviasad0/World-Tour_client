@@ -52,198 +52,202 @@ const AddProduct = () => {
    };
   console.log(user);
   return (
-    <RouteWithTitleUpdate element={
+    <RouteWithTitleUpdate
+      element={
+        <div>
+          <Navbar></Navbar>
 
-    <div>
-      <Navbar></Navbar>
-      <h1 className="text-center text-3xl font-bold"></h1>
-      {/* main */}
-      <div className="max-w-screen-2xl mx-auto ">
-        <div
-          className="hero min-h-screen bg-green-50 rounded-xl"
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="3000"
-        >
-          <div className="flex items-center  gap-20 justify-center flex-col lg:flex-row-reverse md:px-10">
-            <div className="text-center lg:text-left ">
-              {/* hero sectiton */}
-              <div
-                className="hero h-[70vh] rounded-xl"
-                data-aos="fade-left"
-                data-aos-easing="linear"
-                data-aos-duration="3000"
-                style={{
-                  backgroundImage:
-                    "url(https://i.ibb.co/TgsRJ4R/pexels-pixabay-164634.jpg)",
-                }}
-              >
-                <div className="hero-overlay rounded-xl bg-opacity-40"></div>
-                <div className="hero-content text-center text-neutral-content">
-                  <div className="">
-                    <h1 className="mb-5 text-5xl text-white font-bold">
-                      Need to Add New Exciting Car!!!
-                    </h1>
-                    <p className="mb-5 text-xl font-semibold tracking-widest">
-                      Just fill the form and add the super sport cars .You have
-                      add the Image_Url and the nae of the car ,the brand name
-                      ,the type of the car ,the price of the car , the rating of
-                      the car , and a short description of the car .Just click
-                      the ADD CAR button and add the car.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* form section */}
+          {/* main */}
+          <div className="max-w-screen-2xl mx-auto ">
             <div
-              className=" flex-shrink-0 w-1/3  "
-              data-aos="fade-right"
+              className="hero min-h-screen bg-blue-50 py-10 rounded-xl"
+              data-aos="fade-down"
               data-aos-easing="linear"
               data-aos-duration="3000"
             >
-              <form onSubmit={handleFormSubmit} className="">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text text-xl font-medium text-black">
-                      Image URL
-                    </span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Package Image url"
-                    name="image_url"
-                    className="input input-bordered input-success w-full "
-                    required
-                  />
+              <div className="flex items-center  gap-20 justify-center flex-col lg:flex-row-reverse md:px-10">
+                <div className="text-center lg:text-left ">
+                  {/* hero sectiton */}
+                  <div
+                    className="hero h-[70vh] rounded-xl"
+                    data-aos="fade-left"
+                    data-aos-easing="linear"
+                    data-aos-duration="3000"
+                  >
+                    <div className="">
+                      <div className="">
+                        <h1 className="mb-5 text-5xl font-bold">
+                          Need to Add New Exciting Package !!!
+                        </h1>
+                        <p className="mb-5 text-xl font-semibold tracking-widest">
+                          Just fill the form and add the new packages .You have
+                          add the Image_Url of that package and the name of the
+                          package ,service provider image url ,the email of the
+                          provider ,the price of the package , sercice area ,
+                          and a short description of the package .Just click the
+                          ADD PURCHASE button and add the Package.
+                        </p>
+                      </div>
+                      <div>
+                        <img
+                          className="h-[600px] rounded-xl"
+                          src="https://i.ibb.co/WkLfKJK/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <br />
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text text-xl font-medium text-black">
-                      Package Name
-                    </span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Package Name"
-                    name="Package_name"
-                    className="input input-bordered input-success w-full "
-                    required
-                  />
+
+                {/* form section */}
+                <div
+                  className=" flex-shrink-0 w-1/3  "
+                  data-aos="fade-right"
+                  data-aos-easing="linear"
+                  data-aos-duration="3000"
+                >
+                  <form onSubmit={handleFormSubmit} className="">
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text text-xl font-medium text-black">
+                          Image URL
+                        </span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Package Image url"
+                        name="image_url"
+                        className="input input-bordered input-info w-full "
+                        required
+                      />
+                    </div>
+                    <br />
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text text-xl font-medium text-black">
+                          Package Name
+                        </span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Package Name"
+                        name="Package_name"
+                        className="input input-bordered input-info w-full "
+                        required
+                      />
+                    </div>
+                    <br />
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text text-xl font-medium text-black">
+                          Name
+                        </span>
+                      </label>
+                      <input
+                        type="text"
+                        // placeholder="Name"
+                        defaultValue={user?.displayName}
+                        name="name"
+                        className="input input-bordered input-info w-full cursor-none"
+                        readOnly
+                      />
+                    </div>
+                    <br />
+
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text text-xl font-medium text-black">
+                          Service Provider Image URL
+                        </span>
+                      </label>
+                      <input
+                        type="text"
+                        // placeholder="Name"
+                        defaultValue={user?.photoURL}
+                        name="providerImage"
+                        className="input input-bordered input-info w-full cursor-none"
+                        readOnly
+                      />
+                    </div>
+                    <br />
+
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text text-xl font-medium text-black">
+                          Email
+                        </span>
+                      </label>
+                      <input
+                        type="email"
+                        // placeholder="Email"
+                        defaultValue={user?.email}
+                        name="email"
+                        className="input input-bordered input-info w-full cursor-none"
+                        readOnly
+                      />
+                    </div>
+                    <br />
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text text-xl font-medium text-black">
+                          Price
+                        </span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Price"
+                        name="price"
+                        className="input input-bordered input-info w-full "
+                        required
+                      />
+                    </div>
+                    <br />
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text text-xl font-medium text-black">
+                          Service Area
+                        </span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Service Area"
+                        name="service_area"
+                        className="input input-bordered input-info w-full "
+                        required
+                      />
+                    </div>
+                    <br />
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text text-xl font-medium text-black">
+                          Short description
+                        </span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Short description"
+                        name="short_description"
+                        className="input input-bordered input-info w-full "
+                        required
+                      />
+                    </div>
+
+                    <br />
+                    <input
+                      type="submit"
+                      value="ADD PACKAGE"
+                      className="btn btn-success border-2 border-blue-600 text-blue-700 bg-blue-400 w-full text-xl tracking-widest font-bold"
+                    />
+                  </form>
                 </div>
-                <br />
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text text-xl font-medium text-black">
-                       Name
-                    </span>
-                  </label>
-                  <input
-                    type="text"
-                    // placeholder="Name"
-                    defaultValue={user?.displayName}
-                    name="name"
-                    className="input input-bordered input-success w-full cursor-none"
-                    readOnly
-                  />
-                </div>
-                <br />
-                
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text text-xl font-medium text-black">
-                       Service Provider Image URL
-                    </span>
-                  </label>
-                  <input
-                    type="text"
-                    // placeholder="Name"
-                    defaultValue={user?.photoURL}
-                    name="providerImage"
-                    className="input input-bordered input-success w-full cursor-none"
-                    readOnly
-                  />
-                </div>
-                <br />
-                
-                
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text text-xl font-medium text-black">
-                      Email
-                    </span>
-                  </label>
-                  <input
-                    type="email"
-                    // placeholder="Email"
-                    defaultValue={user?.email}
-                    name="email"
-                    className="input input-bordered input-success w-full cursor-none"
-                    readOnly
-                  />
-                </div>
-                <br />
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text text-xl font-medium text-black">
-                      Price
-                    </span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Price"
-                    name="price"
-                    className="input input-bordered input-success w-full "
-                    required
-                  />
-                </div>
-                <br />
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text text-xl font-medium text-black">
-                      Service Area
-                    </span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Service Area"
-                    name="service_area"
-                    className="input input-bordered input-success w-full "
-                    required
-                  />
-                </div>
-                <br />
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text text-xl font-medium text-black">
-                      Short description
-                    </span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Short description"
-                    name="short_description"
-                    className="input input-bordered input-success w-full "
-                    required
-                  />
-                </div>
-                
-                <br />
-                <input
-                  type="submit"
-                  defaultValue="ADD PACKAGE"
-                  className="btn btn-success w-full text-xl tracking-widest font-bold"
-                />
-              </form>
+              </div>
             </div>
           </div>
+          <Footer></Footer>
         </div>
-      </div>
-      <Footer></Footer>
-    </div>
-    } title="Add_Package" />
+      }
+      title="Add_Package"
+    />
   );
 };
 

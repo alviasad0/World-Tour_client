@@ -4,28 +4,20 @@ const Footer = () => {
     return (
       <div className="mt-24">
         <footer
-          className="footer p-10 bg-green-100 text-base-content"
+          className="footer p-10 bg-blue-200 text-base-content"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1500"
         >
           <nav>
-            <header className="text-xl font-medium text-black">Packages</header>
-            <Link to="/" className="link link-hover">Home</Link>
-            <Link to='/allPackages' className="link link-hover">All Packages</Link>
-            <Link to="/mySchedules" className="link link-hover">My Schedules</Link>
-            <Link to='/myPackages' className="link link-hover">My Packages</Link>
-            <Link to='/addService' className="link link-hover">Add Package</Link>
-          </nav>
-          <nav>
-            <header className="text-xl font-medium text-black">Company</header>
-            <Link to='/aboutUs' className="link link-hover">About us</Link>
-            <Link to='/contact' className="link link-hover">Contact</Link>
-            <Link to='/login' className="link link-hover">LogIn</Link>
-            <Link to='/terms' className="link link-hover">Terms & Conditions</Link>
-          </nav>
-          <nav>
-            <header className="text-xl font-medium text-black">Social</header>
+            <div className="pb-5">
+              <img
+                src="https://i.postimg.cc/DZ88FvC8/logo-for-a11.png"
+                className="w-[200px] h-[70px]"
+                alt=""
+              />
+            </div>
+            <header className="text-2xl font-medium text-black">Social</header>
             <div className="grid grid-flow-col gap-4">
               <Link>
                 <svg
@@ -61,6 +53,59 @@ const Footer = () => {
                 </svg>
               </Link>
             </div>
+          </nav>
+          <nav>
+            <header className="text-2xl font-medium text-black">
+              Packages
+            </header>
+            <Link to="/" className="link link-hover text-lg font-semibold">
+              Home
+            </Link>
+            <Link
+              to="/allPackages"
+              className="link link-hover text-lg font-semibold"
+            >
+              All Packages
+            </Link>
+            <Link
+              to="/mySchedules"
+              className="link link-hover text-lg font-semibold"
+            >
+              My Schedules
+            </Link>
+            <Link
+              to="/myPackages"
+              className="link link-hover text-lg font-semibold"
+            >
+              My Packages
+            </Link>
+            <Link
+              to="/addService"
+              className="link link-hover text-lg font-semibold"
+            >
+              Add Package
+            </Link>
+          </nav>
+          <nav>
+            <header className="text-2xl font-medium text-black">Company</header>
+            <Link
+              to="/aboutUs"
+              className="link link-hover text-lg font-semibold"
+            >
+              About us
+            </Link>
+            <Link
+              to="/contact"
+              className="link link-hover text-lg font-semibold"
+            >
+              Contact
+            </Link>
+            <Link to="/login" className="link link-hover text-lg font-semibold">
+              LogIn
+            </Link>
+            <Link to="/terms" className="link link-hover text-lg font-semibold">
+              Terms & Conditions
+            </Link>
           </nav>
         </footer>
       </div>
