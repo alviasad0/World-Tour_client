@@ -1,5 +1,5 @@
 # World_Tour
-* client side live link : https://world-tour-39e41.web.app
+* client side live link : https://reliable-druid-52be5e.netlify.app/
 
 
 
